@@ -1,61 +1,209 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# HireFlow - Job Board Application
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A modern, full-featured job board application built with Laravel and Filament Admin Panel. HireFlow connects job seekers with employers through an intuitive platform with advanced search, filtering, and application management.
 
-## About Laravel
+![HireFlow Logo](https://img.shields.io/badge/HireFlow-Job%20Board-blue?style=for-the-badge&logo=laravel)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🚀 Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### For Job Seekers
+- **Advanced Job Search** - Search by keywords, job type, experience level, and location
+- **Salary Information** - View salary ranges and compensation details
+- **Application Tracking** - Apply directly to jobs with deadline tracking
+- **Job Filtering** - Filter by multiple criteria including date posted
+- **Responsive Design** - Works perfectly on desktop, tablet, and mobile
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### For Employers
+- **Job Posting** - Create detailed job listings with rich descriptions
+- **Application Management** - Track and manage job applications
+- **Company Profiles** - Showcase your company with logos and details
+- **Deadline Management** - Set application deadlines with automatic status updates
 
-## Learning Laravel
+### Admin Features
+- **Filament Admin Panel** - Powerful admin interface for managing the platform
+- **Analytics Dashboard** - View job statistics, user activity, and salary distributions
+- **User Management** - Manage users, listings, and platform settings
+- **Real-time Charts** - Visualize data with interactive charts and graphs
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 🛠️ Technology Stack
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- **Backend**: Laravel 11 (PHP 8.2+)
+- **Frontend**: Blade Templates with Tailwind CSS
+- **Admin Panel**: Filament 3
+- **Database**: PostgreSQL/MySQL
+- **Authentication**: Laravel Breeze
+- **Icons**: Font Awesome
+- **Charts**: Chart.js via Filament
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 📋 Requirements
 
-## Laravel Sponsors
+- PHP 8.2 or higher
+- Composer
+- Node.js & NPM
+- PostgreSQL or MySQL
+- Web server (Apache/Nginx)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 🚀 Installation
 
-### Premium Partners
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd codehustle
+   ```
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+2. **Install PHP dependencies**
+   ```bash
+   composer install
+   ```
 
-## Contributing
+3. **Install Node.js dependencies**
+   ```bash
+   npm install
+   ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+4. **Environment setup**
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
 
-## Code of Conduct
+5. **Configure database**
+   ```bash
+   # Update .env with your database credentials
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=hireflow
+   DB_USERNAME=your_username
+   DB_PASSWORD=your_password
+   ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+6. **Run migrations and seeders**
+   ```bash
+   php artisan migrate
+   php artisan db:seed
+   ```
 
-## Security Vulnerabilities
+7. **Create storage link**
+   ```bash
+   php artisan storage:link
+   ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+8. **Build assets**
+   ```bash
+   npm run build
+   ```
 
-## License
+9. **Start the development server**
+   ```bash
+   php artisan serve
+   ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 🎯 Usage
+
+### For Job Seekers
+1. Visit the homepage to browse all available jobs
+2. Use the search filters to find specific positions
+3. Click on job titles to view detailed descriptions
+4. Apply for jobs using the "Apply Now" button
+5. Track application deadlines and status
+
+### For Employers
+1. Register an account or log in
+2. Click "Post a Job" to create new listings
+3. Fill in job details including salary, requirements, and deadline
+4. Manage your posted jobs from the dashboard
+5. Review and respond to applications
+
+### For Administrators
+1. Access the admin panel at `/admin`
+2. View analytics and platform statistics
+3. Manage users, listings, and system settings
+4. Monitor platform activity and performance
+
+## 📊 Database Structure
+
+### Key Tables
+- `users` - User accounts and authentication
+- `listings` - Job postings with detailed information
+- `password_resets` - Password reset functionality
+- `failed_jobs` - Queue job management
+- `personal_access_tokens` - API authentication
+
+### Listing Fields
+- Basic info: title, company, location, description
+- Job details: job_type, experience_level, salary_min/max
+- Application: application_deadline, contact information
+- Metadata: tags, logo, user_id, timestamps
+
+## 🎨 Customization
+
+### Styling
+- Modify Tailwind CSS classes in Blade templates
+- Update color scheme in `tailwind.config.js`
+- Customize Filament theme in `config/filament.php`
+
+### Features
+- Add new job types in the migration and factory files
+- Extend search functionality in `ListingController`
+- Create additional admin widgets in `app/Filament/Widgets/`
+
+## 🔧 Development
+
+### Running Tests
+```bash
+php artisan test
+```
+
+### Code Quality
+```bash
+# Install Laravel Pint for code styling
+composer require laravel/pint --dev
+./vendor/bin/pint
+```
+
+### Database Seeding
+```bash
+# Seed with sample data
+php artisan db:seed --class=LaragigsSeeder
+```
+
+## 📈 Analytics & Monitoring
+
+The admin dashboard includes:
+- **Stats Overview** - Total jobs, users, and applications
+- **Latest Listings** - Recent job postings
+- **Job Type Chart** - Distribution of job types
+- **User Activity Chart** - User engagement over time
+- **Salary Distribution Chart** - Salary range analysis
+
+## 🔒 Security Features
+
+- CSRF protection on all forms
+- Input validation and sanitization
+- Authentication middleware
+- Secure file uploads
+- SQL injection prevention via Eloquent ORM
+
+## 🌟 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## 🤝 Support
+
+For support and questions:
+- Create an issue in the repository
+- Check the Laravel documentation
+- Review Filament documentation for admin panel questions
+
+---
+
+**Built with ❤️ using Laravel and Filament**
