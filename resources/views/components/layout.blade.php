@@ -21,6 +21,7 @@
         theme: {
           extend: {
             colors: {
+              hireflow: '#3b82f6', // Primary blue color
               primary: {
                 50: '#eff6ff',
                 100: '#dbeafe',
