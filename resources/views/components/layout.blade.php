@@ -66,7 +66,12 @@
       <div class="flex justify-between h-16">
         <div class="flex items-center">
           <a href="/" class="flex-shrink-0">
-            <img class="h-8 w-auto" src="{{asset('images/logo.png')}}" alt="HireFlow" />
+            <div class="flex items-center space-x-2">
+              <div class="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
+                <i class="fa-solid fa-briefcase text-white text-sm"></i>
+              </div>
+              <span class="text-xl font-bold text-gray-900 dark:text-white">HireFlow</span>
+            </div>
           </a>
         </div>
         
